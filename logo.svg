@@ -1,0 +1,28 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular -->
+  <circle cx="60" cy="60" r="58" fill="#0d9488" stroke="#065f46" stroke-width="2"/>
+  
+  <!-- Mancuerna principal -->
+  <g transform="translate(60,60)">
+    <!-- Barra central -->
+    <rect x="-25" y="-3" width="50" height="6" fill="white" rx="3"/>
+    
+    <!-- Disco izquierdo -->
+    <circle cx="-20" cy="0" r="12" fill="white"/>
+    <circle cx="-20" cy="0" r="8" fill="#0d9488"/>
+    
+    <!-- Disco derecho -->
+    <circle cx="20" cy="0" r="12" fill="white"/>
+    <circle cx="20" cy="0" r="8" fill="#0d9488"/>
+    
+    <!-- Elementos de progreso (flechas hacia arriba) -->
+    <g transform="translate(0,-25)">
+      <path d="M-3,8 L0,2 L3,8 Z" fill="white"/>
+      <path d="M-7,12 L-4,6 L-1,12 Z" fill="rgba(255,255,255,0.7)"/>
+      <path d="M1,12 L4,6 L7,12 Z" fill="rgba(255,255,255,0.7)"/>
+    </g>
+  </g>
+  
+  <!-- Texto "PGM" en la parte inferior -->
+  <text x="60" y="95" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">PGM</text>
+</svg>

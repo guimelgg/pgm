@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Ganancia Muscular</title>
+    <!-- NOTA: Para que el login con Google funcione, necesitas crear tu propio ID de Cliente en Google Cloud Console y reemplazar el contenido de "content". -->
+    <meta name="google-signin-client_id" content="163032871211-9oq4qs05uk8ao4imkuqvbsuqjd4ui6qu.apps.googleusercontent.com">
+    <meta name="theme-color" content="#0d9488"/>
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+        <header class="text-center mb-4">
+            <div class="flex justify-end items-center h-12">
+                 <!-- Contenedor para Login/Perfil de Usuario -->
+                <div id="auth-container">
+                    <div id="g-signin2" class="g-signin2"></div>
+                    <div id="user-profile" class="hidden items-center">
+                        <img id="user-pic" class="w-8 h-8 rounded-full mr-2" alt="User photo">
+                        <span id="user-name" class="text-sm font-semibold mr-4"></span>
+                        <button id="logout-button" class="text-sm text-slate-600 hover:text-teal-600 transition">Salir</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900">Plan de Ganancia Muscular</h1>
+            <p class="text-slate-600 mt-2">Tu guía interactiva para el entrenamiento y la nutrición.</p>
+        </header>
+
+        <nav class="flex justify-center border-b border-slate-200 mb-8 overflow-x-auto">
+            <a href="#mis-datos" class="nav-link px-4 py-2 text-sm md:text-base">Mis Datos</a>
+            <a href="#resumen" class="nav-link active px-4 py-2 text-sm md:text-base">Resumen</a>
+            <a href="#plan-semanal" class="nav-link px-4 py-2 text-sm md:text-base">Plan Semanal</a>
+            <a href="#nutricion" class="nav-link px-4 py-2 text-sm md:text-base">Nutrición</a>
+            <a href="#principios" class="nav-link px-4 py-2 text-sm md:text-base">Principios</a>
+        </nav>
+
+        <main id="main-content">
+            <div id="app-content">
+                <section id="mis-datos" class="content-section">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold mb-4 text-teal-700">Configura tus Datos</h2>
+                        <p class="text-slate-600 mb-6">
+                            Introduce tus datos personales para calcular tus necesidades calóricas y de macronutrientes. Los resultados se actualizarán automáticamente en la sección de "Resumen".
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div>
+                                <label for="age" class="block text-sm font-medium text-slate-700">Edad (años)</label>
+                                <input type="number" id="age" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 sm:text-sm p-2">
+                            </div>
+                            <div>
+                                <label for="weight" class="block text-sm font-medium text-slate-700">Peso (kg)</label>
+                                <input type="number" id="weight" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 sm:text-sm p-2">
+                            </div>
+                            <div>
+                                <label for="height" class="block text-sm font-medium text-slate-700">Altura (cm)</label>
+                                <input type="number" id="height" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 sm:text-sm p-2">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="resumen" class="content-section active">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold mb-4 text-teal-700">Bienvenido a tu Plan Personalizado</h2>
+                        <p class="text-slate-600 mb-6">
+                            Esta es tu central de operaciones. Aquí encontrarás un resumen de tus metas nutricionales y la estructura de tu semana de entrenamiento. El plan está diseñado para maximizar la ganancia muscular de forma segura y efectiva, considerando la recuperación como un pilar fundamental.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                            <div class="bg-teal-50 p-4 rounded-lg">
+                                <h3 class="font-bold text-lg text-teal-800">Calorías Diarias</h3>
+                                <p id="calories-display" class="text-2xl font-semibold text-teal-600">--</p>
+                                <p class="text-xs text-slate-500">Kcal</p>
+                            </div>
+                            <div class="bg-teal-50 p-4 rounded-lg">
+                                <h3 class="font-bold text-lg text-teal-800">Proteína Diaria</h3>
+                                <p id="protein-display" class="text-2xl font-semibold text-teal-600">--</p>
+                                <p class="text-xs text-slate-500">Gramos</p>
+                            </div>
+                            <div class="bg-teal-50 p-4 rounded-lg">
+                                <h3 class="font-bold text-lg text-teal-800">Hidratación</h3>
+                                <p id="hydration-display" class="text-2xl font-semibold text-teal-600">--</p>
+                                <p class="text-xs text-slate-500">Litros diarios</p>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-xl font-bold mb-4 text-center text-teal-700">Estructura Semanal: Push/Pull/Legs</h3>
+                             <div class="flex flex-wrap justify-center gap-2 text-xs md:text-sm">
+                                <div class="flex-1 min-w-[100px] text-center bg-sky-100 text-sky-800 p-3 rounded-md font-semibold">Día 1: Empuje</div>
+                                <div class="flex-1 min-w-[100px] text-center bg-amber-100 text-amber-800 p-3 rounded-md font-semibold">Día 2: Tire</div>
+                                <div class="flex-1 min-w-[100px] text-center bg-emerald-100 text-emerald-800 p-3 rounded-md font-semibold">Día 3: Pierna</div>
+                                <div class="flex-1 min-w-[100px] text-center bg-sky-100 text-sky-800 p-3 rounded-md font-semibold">Día 4: Empuje</div>
+                                <div class="flex-1 min-w-[100px] text-center bg-amber-100 text-amber-800 p-3 rounded-md font-semibold">Día 5: Tire</div>
+                                <div class="flex-1 min-w-[100px] text-center bg-emerald-100 text-emerald-800 p-3 rounded-md font-semibold">Día 6: Pierna</div>
+                                <div class="flex-1 min-w-[100px] text-center bg-slate-200 text-slate-800 p-3 rounded-md font-semibold">Día 7: Descanso</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="plan-semanal" class="content-section">
+                     <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold mb-2 text-teal-700">Tu Rutina de Entrenamiento</h2>
+                        <p class="text-slate-600 mb-6">
+                            Selecciona un día para ver los ejercicios. Haz clic en 🖼️ para ver un GIF y en ▶️ para un video tutorial.
+                        </p>
+                        <div class="flex flex-wrap justify-center gap-2 mb-6">
+                            <button data-day="1" class="day-selector active flex-1 md:flex-none px-4 py-2 bg-slate-200 rounded-md font-semibold transition">Día 1/4: Empuje</button>
+                            <button data-day="2" class="day-selector flex-1 md:flex-none px-4 py-2 bg-slate-200 rounded-md font-semibold transition">Día 2/5: Tire</button>
+                            <button data-day="3" class="day-selector flex-1 md:flex-none px-4 py-2 bg-slate-200 rounded-md font-semibold transition">Día 3/6: Pierna</button>
+                        </div>
+                        <div id="workout-container" class="overflow-x-auto"></div>
+                    </div>
+                </section>
+
+                <section id="nutricion" class="content-section">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold mb-2 text-teal-700">Guía de Nutrición</h2>
+                        <p class="text-slate-600 mb-6">
+                            El entrenamiento rompe las fibras musculares; la nutrición las reconstruye más fuertes. Cumplir con estos objetivos de calorías y macronutrientes es crucial para ver resultados. Utiliza el gráfico para entender la distribución de tus macros.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <div class="chart-container">
+                                    <canvas id="macroChart"></canvas>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-4 text-teal-700">Fuentes Recomendadas</h3>
+                                <div class="space-y-4">
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800">Proteínas</h4>
+                                        <p class="text-sm text-slate-600">Pollo, pavo, pescado, carne magra, huevos, yogur griego, legumbres, tofu.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800">Carbohidratos</h4>
+                                        <p class="text-sm text-slate-600">Avena, arroz integral, quinoa, papas, camote, pasta integral, frutas, verduras.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800">Grasas Saludables</h4>
+                                        <p class="text-sm text-slate-600">Aguacate, nueces, semillas, aceite de oliva, pescado graso (salmón).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="principios" class="content-section">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold mb-2 text-teal-700">Principios Clave</h2>
+                         <p class="text-slate-600 mb-6">
+                            Más allá de los ejercicios y la dieta, estos son los conceptos que impulsarán tu progreso. Mantenlos siempre presentes para asegurar un avance constante y sostenible en el tiempo.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-teal-500 mr-3 mt-1">✓</span>
+                                <div>
+                                    <h3 class="font-semibold">Sobrecarga Progresiva</h3>
+                                    <p class="text-slate-600 text-sm">Debes desafiar a tus músculos constantemente, ya sea aumentando el peso, las repeticiones o las series de forma gradual.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                 <span class="text-teal-500 mr-3 mt-1">✓</span>
+                                <div>
+                                    <h3 class="font-semibold">Técnica sobre el Peso</h3>
+                                    <p class="text-slate-600 text-sm">Una forma correcta asegura que el músculo objetivo haga el trabajo y previene lesiones. Nunca sacrifiques la técnica por levantar más peso.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                 <span class="text-teal-500 mr-3 mt-1">✓</span>
+                                <div>
+                                    <h3 class="font-semibold">Conexión Mente-Músculo</h3>
+                                    <p class="text-slate-600 text-sm">Concéntrate activamente en sentir la contracción del músculo que estás trabajando en cada repetición.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-teal-500 mr-3 mt-1">✓</span>
+                                <div>
+                                    <h3 class="font-semibold">Descanso y Recuperación</h3>
+                                    <p class="text-slate-600 text-sm">El crecimiento muscular ocurre cuando descansas, no cuando entrenas. Prioriza 7-9 horas de sueño y no te saltes tu día de descanso.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Botón del Chat -->
+    <button id="chat-fab" class="bg-teal-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-2xl fixed bottom-6 right-6 z-50 hover:bg-teal-700 transition">
+        💬
+    </button>
+
+    <!-- Ventana del Chat -->
+    <div id="chat-window" class="hidden fixed bottom-24 right-6 w-80 h-96 bg-white rounded-lg shadow-2xl flex flex-col z-50">
+        <div class="bg-teal-600 text-white p-3 flex justify-between items-center rounded-t-lg">
+            <h3 class="font-bold">Asistente de Fitness</h3>
+            <button id="chat-close-btn" class="text-xl">&times;</button>
+        </div>
+        <div id="chat-messages" class="flex-1 p-4 overflow-y-auto">
+            <!-- Mensajes del chat aquí -->
+        </div>
+        <form id="chat-form" class="p-2 border-t flex">
+            <input type="text" id="chat-input" placeholder="Haz una pregunta..." class="flex-1 p-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-teal-500">
+            <button type="submit" class="bg-teal-600 text-white px-4 rounded-r-md hover:bg-teal-700">Enviar</button>
+        </form>
+    </div>
+
+    <div id="imageModal" class="modal" style="display: none;">
+      <span class="modal-close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onGoogleScriptLoad" async defer></script>
+</body>
+</html>

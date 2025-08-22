@@ -1,0 +1,57 @@
+{
+    "day1": {
+        "title": "Empuje",
+        "workouts": [
+            { "day": 1, "name": "Press de banca", "series": "4", "reps": "8-12", "notes": "Prioriza técnica sobre peso.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Bench-Press.gif", "video": "https://www.youtube.com/watch?v=rT7DgCr-3pg" },
+            { "day": 1, "name": "Press inclinado c/mancuernas", "series": "3", "reps": "10-15", "notes": "Enfoque en pecho superior.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Incline-Bench-Press.gif", "video": "https://www.youtube.com/watch?v=8iPEnn-ltC8" },
+            { "day": 1, "name": "Aperturas c/mancuernas", "series": "3", "reps": "12-15", "notes": "Siente el estiramiento.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Fly.gif", "video": "https://www.youtube.com/watch?v=eozb-7_p0-Y" },
+            { "day": 1, "name": "Press militar sentado", "series": "3", "reps": "10-15", "notes": "Controla el movimiento.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif", "video": "https://www.youtube.com/watch?v=qEwKCR5JCog" },
+            { "day": 1, "name": "Elevaciones laterales", "series": "4", "reps": "12-15", "notes": "No uses impulso.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif", "video": "https://www.youtube.com/watch?v=3VcKaXpzqRo" },
+            { "day": 1, "name": "Fondos en paralelas", "series": "3", "reps": "Al fallo", "notes": "O en máquina asistida.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dip.gif", "video": "https://www.youtube.com/watch?v=2z8JmcrW-As" },
+            { "day": 1, "name": "Extensiones de tríceps", "series": "3", "reps": "12-15", "notes": "En polea alta.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Triceps-Pushdown.gif", "video": "https://www.youtube.com/watch?v=2-LAMcpzODU" },
+            { "day": 4, "name": "Press inclinado c/barra", "series": "4", "reps": "8-12", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/incline-barbell-bench-press.gif", "video": "https://www.youtube.com/watch?v=SrqOu55lrFs" },
+            { "day": 4, "name": "Press plano c/mancuernas", "series": "3", "reps": "10-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Bench-Press.gif", "video": "https://www.youtube.com/watch?v=VmB1G1K7v94" },
+            { "day": 4, "name": "Cruces de poleas", "series": "3", "reps": "12-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Crossover.gif", "video": "https://www.youtube.com/watch?v=taI4XduLpTk" },
+            { "day": 4, "name": "Press Arnold", "series": "3", "reps": "10-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/04/Dumbbell-Arnold-Press.gif", "video": "https://www.youtube.com/watch?v=3ml7oUdrKRs" },
+            { "day": 4, "name": "Elevaciones frontales", "series": "3", "reps": "12-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Front-Raise.gif", "video": "https://www.youtube.com/watch?v=s_L1s-3pGzs" },
+            { "day": 4, "name": "Press francés", "series": "3", "reps": "10-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/EZ-Bar-Skull-Crusher.gif", "video": "https://www.youtube.com/watch?v=d_KZxkY_0cM" },
+            { "day": 4, "name": "Patada de tríceps", "series": "3", "reps": "12-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Triceps-Kickback.gif", "video": "https://www.youtube.com/watch?v=6SS6K3lAwZ8" }
+        ]
+    },
+    "day2": {
+        "title": "Tire",
+        "workouts": [
+            { "day": 2, "name": "Dominadas o Jalón al pecho", "series": "4", "reps": "6-12", "notes": "Agarre ancho.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Pull-up.gif", "video": "https://www.youtube.com/watch?v=eGo4IYlbE5g" },
+            { "day": 2, "name": "Remo con barra", "series": "3", "reps": "8-12", "notes": "Espalda recta.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Bent-Over-Row.gif", "video": "https://www.youtube.com/watch?v=vT2GjY_Umpw" },
+            { "day": 2, "name": "Remo en polea baja", "series": "3", "reps": "10-15", "notes": "Agarre cerrado.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/seated-cable-row.gif", "video": "https://www.youtube.com/watch?v=GZbfZ033f74" },
+            { "day": 2, "name": "Face pulls (Jalón a la cara)", "series": "4", "reps": "15-20", "notes": "Salud de hombros.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/05/Face-Pull.gif", "video": "https://www.youtube.com/watch?v=rep-qVOkqgk" },
+            { "day": 2, "name": "Curl de bíceps con barra", "series": "3", "reps": "10-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Biceps-Curl.gif", "video": "https://www.youtube.com/watch?v=kwG2Zqt1_YI" },
+            { "day": 2, "name": "Curl martillo", "series": "3", "reps": "12-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif", "video": "https://www.youtube.com/watch?v=zC3nLlEvin4" },
+            { "day": 2, "name": "Curl de antebrazo", "series": "3", "reps": "15-20", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/06/Wrist-Curl.gif", "video": "https://www.youtube.com/watch?v=u61QWKYgbxI" },
+            { "day": 5, "name": "Peso muerto", "series": "4", "reps": "6-10", "notes": "Técnica impecable.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Deadlift.gif", "video": "https://www.youtube.com/watch?v=wjsUFV5_Zd4" },
+            { "day": 5, "name": "Remo c/mancuerna a 1 mano", "series": "3", "reps": "10-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Row.gif", "video": "https://www.youtube.com/watch?v=pYcpY20QaE8" },
+            { "day": 5, "name": "Pulldowns agarre neutro", "series": "3", "reps": "12-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Neutral-Grip-Lat-Pulldown.gif", "video": "https://www.youtube.com/watch?v=i_tCg0gD5dE" },
+            { "day": 5, "name": "Encogimientos de hombros", "series": "3", "reps": "12-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shrug.gif", "video": "https://www.youtube.com/watch?v=cJRVVxmytaM" },
+            { "day": 5, "name": "Curl en banco Scott", "series": "3", "reps": "10-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/preacher-curl.gif", "video": "https://www.youtube.com/watch?v=fIWP-FRFNU0" },
+            { "day": 5, "name": "Curl concentrado", "series": "3", "reps": "12-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Concentration-Curl.gif", "video": "https://www.youtube.com/watch?v=0AUGkch3tzc" },
+            { "day": 5, "name": "Paseo del granjero", "series": "3", "reps": "30-45s", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/09/Farmer-s-Walk.gif", "video": "https://www.youtube.com/watch?v=Fkzk_RqlYig" }
+        ]
+    },
+    "day3": {
+        "title": "Pierna",
+        "workouts": [
+            { "day": 3, "name": "Sentadillas traseras", "series": "4", "reps": "8-12", "notes": "Baja de forma controlada.", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Squat.gif", "video": "https://www.youtube.com/watch?v=bEv6CCg2BC8" },
+            { "day": 3, "name": "Prensa de piernas", "series": "3", "reps": "10-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/03/Leg-Press.gif", "video": "https://www.youtube.com/watch?v=IZxyjW7MPJQ" },
+            { "day": 3, "name": "Extensiones de cuádriceps", "series": "3", "reps": "12-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/03/Leg-Extension.gif", "video": "https://www.youtube.com/watch?v=YyvSfVjQeL0" },
+            { "day": 3, "name": "Curl femoral acostado", "series": "4", "reps": "12-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/03/Lying-Leg-Curl.gif", "video": "https://www.youtube.com/watch?v=1Tq3QdYUuHs" },
+            { "day": 3, "name": "Elevación de talones (de pie)", "series": "4", "reps": "15-20", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/05/Standing-Calf-Raise.gif", "video": "https://www.youtube.com/watch?v=Jfl_g_MawS4" },
+            { "day": 3, "name": "Crunch en polea alta", "series": "3", "reps": "15-20", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/08/Cable-Crunch.gif", "video": "https://www.youtube.com/watch?v=vM26wO0a-a4" },
+            { "day": 6, "name": "Zancadas c/mancuernas", "series": "4", "reps": "10-12 c/p", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lunge.gif", "video": "https://www.youtube.com/watch?v=D7KaRcUTQeE" },
+            { "day": 6, "name": "Peso muerto rumano c/manc.", "series": "3", "reps": "10-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Romanian-Deadlift.gif", "video": "https://www.youtube.com/watch?v=2r5a0_i-p58" },
+            { "day": 6, "name": "Sentadilla búlgara", "series": "3", "reps": "12-15 c/p", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/05/Bulgarian-Split-Squat.gif", "video": "https://www.youtube.com/watch?v=2C-uNgKwPLE" },
+            { "day": 6, "name": "Hip Thrust con barra", "series": "4", "reps": "10-15", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/08/Barbell-Hip-Thrust.gif", "video": "https://www.youtube.com/watch?v=xDmFkJxPzeM" },
+            { "day": 6, "name": "Elevación de talones (sentado)", "series": "4", "reps": "20-25", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/05/Seated-Calf-Raise.gif", "video": "https://www.youtube.com/watch?v=JbyjN43haPs" },
+            { "day": 6, "name": "Plancha abdominal", "series": "3", "reps": "45-60s", "notes": "", "gif": "https://fitnessprogramer.com/wp-content/uploads/2021/08/Plank.gif", "video": "https://www.youtube.com/watch?v=pSHjTRCQxIw" }
+        ]
+    }
+}
