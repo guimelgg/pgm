@@ -342,7 +342,7 @@ async function handleUserMessage(event) {
 }
 
 async function getAIResponse(prompt) {
-  const apiKey = 'AIzaSyDgx7HvPc02OQHGRm_EJKZsTNRqbnLWVZc'; //  AIzaSyDgx7HvPc02OQHGRm_EJKZsTNRqbnLWVZc , AIzaSyCmrlFduxR5ovY3bBGtMIDnSmXsiDU5_9s⚠️ IMPORTANTE: Debes agregar tu API Key de Google AI Studio aquí
+  const apiKey = ""; // ⚠️ IMPORTANTE: Debes agregar tu API Key de Google AI Studio aquí
 
   if (!apiKey || apiKey.trim() === '') {
     throw new Error('API Key de Gemini no configurada. Por favor, obtén una API key en https://aistudio.google.com/');

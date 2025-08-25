@@ -4,10 +4,16 @@
 
 ### 1. **API Key de Google Gemini (Para el Chat con IA)**
 
+⚠️ **IMPORTANTE: NUNCA expongas tu API Key en el código público**
+
 1. Ve a [Google AI Studio](https://aistudio.google.com/)
 2. Crea una cuenta o inicia sesión
 3. Obtén tu API Key gratuita
-4. En el archivo `script.js`, línea aproximada 177, reemplaza:
+4. **OPCIÓN SEGURA**: Crea un archivo `.env.local` en la carpeta del proyecto:
+   ```
+   GOOGLE_GEMINI_API_KEY=tu_api_key_aqui
+   ```
+5. **OPCIÓN ALTERNATIVA**: En el archivo `script.js`, línea aproximada 177, reemplaza:
    ```javascript
    const apiKey = ""; // ⚠️ IMPORTANTE: Debes agregar tu API Key aquí
    ```
@@ -15,6 +21,8 @@
    ```javascript
    const apiKey = "TU_API_KEY_AQUI";
    ```
+
+⚠️ **ADVERTENCIA DE SEGURIDAD**: Si usas la opción alternativa, NUNCA subas el código a repositorios públicos.
 
 #### **⚠️ Limitaciones de la API Gratuita:**
 - **15 consultas por minuto**
